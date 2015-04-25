@@ -24,8 +24,6 @@ From this output, create a list where each element in the list is a tuple consis
 Print this list to standard output.
 '''
 
-from pprint import pprint
-
 show_ip_int_brief = '''
 Interface            IP-Address      OK?     Method      Status     Protocol
 FastEthernet0   unassigned      YES     unset          up          up
@@ -59,9 +57,6 @@ for line in sh_ip_int_br:
     sh_ip_addr.append( (if_name, ip_addr, status, protocol) )
     print formatter % (if_name, ip_addr, status, protocol)
 
-print "=" * 60
 print ""
-pprint(sh_ip_addr)
-print ""
-print "=" * 60
+
 # The END
