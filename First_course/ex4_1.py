@@ -1,5 +1,11 @@
 #!/usr/bin/env python
 
+'''
+Prompt a user to input an IP address.  Re-using some of the code from class3,
+exercise4--determine if the IP address is valid.  Continue prompting the user
+to re-input an IP address until a valid IP address is input.
+'''
+
 # IP address checker
 
 def octet_val(octets):
