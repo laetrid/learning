@@ -20,11 +20,14 @@ def bin_padding(ip_addr_bin):
     for i, octet in enumerate(ip_addr_bin):
         ip_addr_bin[i] = "0" * (8 - len(octet)) + octet
         
+def main():
+    print ""
+    ip_addr = raw_input('Please, enter an IP address: ')
+    ip_addr_bin = ip2bin(ip_addr)
+    bin_padding(ip_addr_bin)
+    print '.'.join(ip_addr_bin)
 
-print ""
-ip_addr = raw_input('Please, enter an IP address: ')
-ip_addr_bin = ip2bin(ip_addr)
-bin_padding(ip_addr_bin)
-print '.'.join(ip_addr_bin)
+if __name__ == '__main__':
+    main()
 
 # The END
