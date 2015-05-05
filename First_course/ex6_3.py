@@ -38,16 +38,20 @@ def ip_checker(ip_addr):
     # If func didn't return to main before then IP is all right and I can returt True
     return True
 
-if_valid = False
+def main():
+    if_valid = False
 
-while not if_valid:
+    while not if_valid:
+        print ""
+        ip_addr = raw_input('Please enter an IP address: ')
+        if_valid = ip_checker(ip_addr)
+
     print ""
-    ip_addr = raw_input('Please enter an IP address: ')
-    if_valid = ip_checker(ip_addr)
+    print "IP address: %s is valid" % ip_addr
+    print "Goodbye!"
+    print ""
 
-print ""
-print "IP address: %s is valid" % ip_addr
-print "Goodbye!"
-print ""
+if __name__ == '__main__':
+    main()
 
 # The END
