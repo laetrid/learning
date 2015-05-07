@@ -1,5 +1,25 @@
 #!/usr/bin/env python
 
+'''
+1. Using SNMPv3 create a script that detects changes to the running configuration. If the running configuration is changed, then send an email notification to yourself identifying the router that changed and the time that it changed.
+
+Note, the running configuration of pynet-rtr2 is changing every 15 minutes (roughly at 0, 15, 30, and 45 minutes after the hour).  This will allow you to test your script in the lab environment. I will continue to do this for at least the next week.
+
+In this exercise, you will possibly need to save data to an external file. One way you can accomplish this is by using a pickle file, see:  
+    http://youtu.be/ZJOJjyhhEvM  
+
+A pickle file lets you save native Python data structures (dictionaries, lists, objects) directly to a file.
+
+Bonus challenge: instead of saving your data in a pickle file, save the data using either a YAML or a JSON file. YAML and JSON are data formats that are both human readable and parseable by computers.
+
+For information on reading/writing YAML and JSON using Python see:
+    http://martin-thoma.com/configuration-files-in-python/
+
+Additionally, my alternate solution supports pickle, YAML, or JSON depending on the name of the file (.pkl, .yml, or .json).
+
+(Config options in local ex2_1.json file)
+'''
+
 # Import json for load/savedata in file in json format
 # Import time to take now time in epoch (seconds)
 # Import os.path to check if file with old data present
